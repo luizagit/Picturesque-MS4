@@ -20,7 +20,7 @@
        "model":"photos.category",
        "fields":{
           "name":"natural_world",
-          "friendly_name":"Clearance"
+          "friendly_name":"Natural World"
        }
     },
     {
