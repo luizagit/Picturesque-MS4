@@ -1,0 +1,50 @@
+[
+    {
+       "pk":1,
+       "model":"photos.category",
+       "fields":{
+          "name":"landscapes",
+          "friendly_name":"Landscapes"
+       }
+    },
+    {
+       "pk":2,
+       "model":"photos.category",
+       "fields":{
+          "name":"city_life",
+          "friendly_name":"City Life"
+       }
+    },
+    {
+       "pk":3,
+       "model":"photos.category",
+       "fields":{
+          "name":"natural_world",
+          "friendly_name":"Clearance"
+       }
+    },
+    {
+        "pk":4,
+        "model":"photos.category",
+        "fields":{
+           "name":"concerts",
+           "friendly_name":"Concert Shots"
+        }
+     },
+    {
+       "pk":5,
+       "model":"photos.category",
+       "fields":{
+          "name":"deals",
+          "friendly_name":"Deals"
+       }
+    },
+    {
+       "pk":6,
+       "model":"photos.category",
+       "fields":{
+          "name":"new_photos",
+          "friendly_name":"New Photos"
+       }
+    }
+ ]
