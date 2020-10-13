@@ -12,16 +12,11 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="gallery-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <div class="border-0" aria-labelledby="deals-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'photos' %}?category=city_life,landscapes,natural_world,concerts" id="gallery-link" aria-haspopup="true" aria-expanded="false">
                 Gallery
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="gallery-link">
-                <a href="{% url 'photos' %}?category=city_life" class="dropdown-item">Cities</a>
-                <a href="{% url 'photos' %}?category=landscapes" class="dropdown-item">Landscapes</a>
-                <a href="{% url 'photos' %}?category=natural_world" class="dropdown-item">Natural World</a>
-                <a href="{% url 'photos' %}?category=concerts" class="dropdown-item">Concerts</a>
-                <a href="{% url 'photos' %}?category=city_life,landscapes,natural_world,concerts" class="dropdown-item">All Photos</a>
             </div>
         </li>
 
