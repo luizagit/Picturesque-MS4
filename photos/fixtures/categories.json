@@ -43,8 +43,8 @@
        "pk":6,
        "model":"photos.category",
        "fields":{
-          "name":"new_photos",
-          "friendly_name":"New Photos"
+          "name":"new_shots",
+          "friendly_name":"New Shots"
        }
     }
  ]
