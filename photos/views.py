@@ -8,17 +8,36 @@ def all_photos(request):
 
     photos = Photo.objects.all()
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                photos = photos.annotate(lower_name=Lower('name'))
+
+        if 'direction' in request.GET:
+            direction = request.GET['direction']
+            if direction == 'desc':
+                sortkey = f'-{sortkey}'
+        
+        photos = photos.order_by(sortkey)
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             photos = photos.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+    existent_sorting = f'{sort}_{direction}'
 
     context = {
         'photos': photos,
         'existent_categories': categories,
+        'existent_sorting': existent_sorting,
     }
 
     return render(request, 'photos/photos.html', context)
