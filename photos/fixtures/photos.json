@@ -217,7 +217,7 @@
            "name":"Black Swans",
            "description":"Black Swans Entangled",
            "price":5.0,
-           "category":3,
+           "category":5,
            "rating":4.6,
            "image_url":"",
            "image":"MS4_Natural_World_PIC16.jpg"
@@ -231,7 +231,7 @@
            "name":"Sea Crab",
            "description":"Sea Crab Portmarnock Beach",
            "price":4.0,
-           "category":3,
+           "category":6,
            "rating":4.1,
            "image_url":"",
            "image":"MS4_Natural_World_PIC17.jpg"
