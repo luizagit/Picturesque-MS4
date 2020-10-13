@@ -20,12 +20,12 @@ def all_photos(request):
                 sortkey = 'lower_name'
                 photos = photos.annotate(lower_name=Lower('name'))
 
-        if 'direction' in request.GET:
-            direction = request.GET['direction']
-            if direction == 'desc':
-                sortkey = f'-{sortkey}'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
         
-        photos = photos.order_by(sortkey)
+            photos = photos.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
