@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Photo, Category
+from django.db.models.functions import Lower
 
 # Create your views here.
 
@@ -19,6 +20,8 @@ def all_photos(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 photos = photos.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey == 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
