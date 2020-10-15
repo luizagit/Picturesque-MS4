@@ -59,7 +59,7 @@
       "pk":5,
       "model":"photos.photo",
       "fields":{
-         "sku":"pp000004",
+         "sku":"pp000005",
          "name":"Clontarf Dollymount Strand",
          "description":"Clontarf Kite Festival",
          "price":4.99,
@@ -73,7 +73,7 @@
       "pk":6,
       "model":"photos.photo",
       "fields":{
-         "sku":"pp000004",
+         "sku":"pp000006",
          "name":"Howth Pier",
          "description":"Howth Pier Guitar Strings",
          "price":3.99,
@@ -87,7 +87,7 @@
        "pk":7,
        "model":"photos.photo",
        "fields":{
-          "sku":"pp000005",
+          "sku":"pp000007",
           "name":"Slipknot Opening",
           "description":"Slipknot Opening Concert in Dublin",
           "price":6.0,
@@ -101,7 +101,7 @@
        "pk":8,
        "model":"photos.photo",
        "fields":{
-          "sku":"pp000006",
+          "sku":"pp000008",
           "name":"Bjork",
           "description":"Bjork Concert in Dublin",
           "price":5.0,
@@ -115,7 +115,7 @@
        "pk":9,
        "model":"photos.photo",
        "fields":{
-          "sku":"pp000007",
+          "sku":"pp000009",
           "name":"Depeche Mode",
           "description":"Depeche Mode Concert in Dublin",
           "price":5.0,
@@ -129,7 +129,7 @@
        "pk":10,
        "model":"photos.photo",
        "fields":{
-          "sku":"pp000008",
+          "sku":"pp000010",
           "name":"Massive Attack",
           "description":"Massive Attack Concert in Dublin",
           "price":5.99,
@@ -143,7 +143,7 @@
         "pk":11,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000009",
+           "sku":"pp000011",
            "name":"Malaga Province",
            "description":"Ronda Mountaintop City",
            "price":8.99,
@@ -157,7 +157,7 @@
         "pk":12,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000010",
+           "sku":"pp000012",
            "name":"Caminito del Rey",
            "description":"Caminito del Rey Steep Walls",
            "price":8.0,
@@ -171,7 +171,7 @@
         "pk":13,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000011",
+           "sku":"pp000013",
            "name":"Malaga Benalmadena",
            "description":"Malaga Benalmadena Central Park",
            "price":7.0,
@@ -185,7 +185,7 @@
         "pk":14,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000012",
+           "sku":"pp000014",
            "name":"Caminito del Rey View",
            "description":"Caminito del Rey Ending Tour View",
            "price":6.99,
@@ -199,7 +199,7 @@
         "pk":15,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000013",
+           "sku":"pp000015",
            "name":"Dublin Beach",
            "description":"Surfing the Storm",
            "price":8.99,
@@ -213,7 +213,7 @@
       "pk":16,
       "model":"photos.photo",
       "fields":{
-         "sku":"pp000013",
+         "sku":"pp000016",
          "name":"The Summit Inn",
          "description":"The Summit Inn Ocean View",
          "price":8.99,
@@ -227,7 +227,7 @@
         "pk":17,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000014",
+           "sku":"pp000017",
            "name":"Portmarnock Beach",
            "description":"Portmarnock Beach Horse Riding at Sunset with Little Spectators",
            "price":6.99,
@@ -241,7 +241,7 @@
         "pk":18,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000016",
+           "sku":"pp000018",
            "name":"Black Swans",
            "description":"Black Swans Entangled",
            "price":5.0,
@@ -255,7 +255,7 @@
         "pk":19,
         "model":"photos.photo",
         "fields":{
-           "sku":"pp000017",
+           "sku":"pp000019",
            "name":"Sea Crab",
            "description":"Sea Crab at Portmarnock Beach",
            "price":3.0,
@@ -269,7 +269,7 @@
       "pk":20,
       "model":"photos.photo",
       "fields":{
-         "sku":"pp000017",
+         "sku":"pp000020",
          "name":"Soveja Forest Wild Horses",
          "description":"Soveja Forest Wild Horses",
          "price":3.0,
@@ -283,7 +283,7 @@
       "pk":21,
       "model":"photos.photo",
       "fields":{
-         "sku":"pp000017",
+         "sku":"pp000021",
          "name":"Dalkey Island",
          "description":"Dalkey Island Kayaking Sealed Surprises",
          "price":4.0,
@@ -292,6 +292,19 @@
          "image_url":"",
          "image":"MS4_Natural_World_PIC21.jpg"
       }
+   },
+   {
+      "pk":22,
+      "model":"photos.photo",
+      "fields":{
+         "sku":"pp000022",
+         "name":"Howth Baily Lighthouse",
+         "description":"View from Howth Baily Lighthouse",
+         "price":4.0,
+         "category":6,
+         "rating":4.1,
+         "image_url":"",
+         "image":"MS4_Landscape_PIC17.jpg"
+      }
    }
-
  ]
