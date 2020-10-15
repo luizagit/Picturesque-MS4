@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount', # handles login via social media providers 
     'home',
     'photos',
+    'photobag',
 ]
 
 MIDDLEWARE = [
