@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # allauth requirement
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'photobag.contexts.photobag_contents',
             ],
         },
     },
@@ -153,3 +154,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+FREE_DELIVERY_THRESHOLD = 30
+STANDARD_DELIVERY_PERCENTAGE = 10
