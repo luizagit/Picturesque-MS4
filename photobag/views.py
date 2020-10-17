@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -36,3 +36,17 @@ def adjust_photobag(request, item_id):
 
     request.session['photobag'] = photobag
     return redirect(reverse('view_photobag'))
+
+def remove_photo_from_bag(request, item_id):
+    """Remove the photo from the PhotoShopping bag"""
+
+    try:
+        photobag = request.session.get('photobag', {})
+
+        photobag.pop(item_id)
+
+        request.session['photobag'] = photobag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
