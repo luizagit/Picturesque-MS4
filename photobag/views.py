@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 
 # Create your views here.
 
@@ -22,3 +22,17 @@ def add_to_photobag(request, item_id):
 
     request.session['photobag'] = photobag
     return redirect(redirect_url)
+
+def adjust_photobag(request, item_id):
+    """Adjust the quantity of the specified photo to the specified amount"""
+
+    quantity = int(request.POST.get('quantity'))
+    photobag = request.session.get('photobag', {})
+
+    if quantity > 0:
+        photobag[item_id] = quantity
+    else:
+        photobag.pop(item_id)
+
+    request.session['photobag'] = photobag
+    return redirect(reverse('view_photobag'))
