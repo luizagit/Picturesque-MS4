@@ -1,11 +1,25 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from photos.models import Photo
 
 def photobag_contents(request):
 
     photobag_items = []
     total = 0
     photo_count = 0
+
+    photobag = request.session.get('photobag', {})
+
+    for item_id, quantity in photobag.items():
+        photo = get_object_or_404(Photo, pk=item_id)
+        total += quantity * photo.price
+        photo_count += quantity
+        photobag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'photo': photo,
+        })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
