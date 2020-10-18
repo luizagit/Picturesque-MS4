@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+from photos.models import Photo
 
 # Create your views here.
 
@@ -9,8 +11,9 @@ def view_photobag(request):
 
 
 def add_to_photobag(request, item_id):
-    """ Add a quantity of the specified product to the photoshopping bag """
+    """ Add a quantity of the specified photo to the photoshopping bag """
 
+    photo = Photo.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     photobag = request.session.get('photobag', {})
@@ -19,6 +22,7 @@ def add_to_photobag(request, item_id):
         photobag[item_id] += quantity
     else:
         photobag[item_id] = quantity
+        messages.success(request, f'Added {photo.name} to your photobag')
 
     request.session['photobag'] = photobag
     return redirect(redirect_url)
