@@ -1,1 +1,1 @@
-web: gunicorn picturesque-app-ms4.wsgi:application
+web: gunicorn picturesque_app_ms4.wsgi:application
