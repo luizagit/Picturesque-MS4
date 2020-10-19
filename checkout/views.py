@@ -4,7 +4,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from products.models import Photo
+from photos.models import Photo
 from photobag.contexts import photobag_contents
 
 import stripe
