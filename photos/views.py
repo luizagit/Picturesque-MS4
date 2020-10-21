@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models.functions import Lower
 from .models import Photo, Category
 from .forms import PhotoForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -59,8 +60,13 @@ def photo_detail(request, photo_id):
 
     return render(request, 'photos/photo_detail.html', context)
 
+@login_required
 def add_photo(request):
     """ Add a photo to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = PhotoForm(request.POST, request.FILES)
         if form.is_valid():
@@ -79,8 +85,13 @@ def add_photo(request):
 
     return render(request, template, context)
 
+@login_required
 def edit_photo(request, photo_id):
     """ Edit a photo in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        return redirect(reverse('home'))
+
     photo = get_object_or_404(Photo, pk=photo_id)
     if request.method == 'POST':
         form = PhotoForm(request.POST, request.FILES, instance=photo)
@@ -102,8 +113,13 @@ def edit_photo(request, photo_id):
 
     return render(request, template, context)
 
+@login_required
 def delete_photo(request, photo_id):
     """ Delete a photo from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        return redirect(reverse('home'))
+        
     photo = get_object_or_404(Photo, pk=photo_id)
     photo.delete()
     messages.success(request, 'Photo deleted!')
