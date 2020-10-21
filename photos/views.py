@@ -64,9 +64,9 @@ def add_photo(request):
     if request.method == 'POST':
         form = PhotoForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            photo = form.save()
             messages.success(request, 'Photo successfully added!')
-            return redirect(reverse('add_photo'))
+            return redirect(reverse('photo_detail', args=[photo.id]))
         else:
             messages.error(request, 'Failed to add photo. Please ensure the form is valid.')
     else:
@@ -101,3 +101,10 @@ def edit_photo(request, photo_id):
     }
 
     return render(request, template, context)
+
+def delete_photo(request, photo_id):
+    """ Delete a photo from the store """
+    photo = get_object_or_404(Photo, pk=photo_id)
+    photo.delete()
+    messages.success(request, 'Photo deleted!')
+    return redirect(reverse('photos'))
