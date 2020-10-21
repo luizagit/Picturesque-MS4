@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Photo, Category
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from django.db.models.functions import Lower
 from .models import Photo, Category
 from .forms import PhotoForm
@@ -61,7 +61,17 @@ def photo_detail(request, photo_id):
 
 def add_photo(request):
     """ Add a photo to the store """
-    form = PhotoForm()
+    if request.method == 'POST':
+        form = PhotoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Photo successfully added!')
+            return redirect(reverse('add_photo'))
+        else:
+            messages.error(request, 'Failed to add photo. Please ensure the form is valid.')
+    else:
+        form = PhotoForm()
+
     template = 'photos/add_photo.html'
     context = {
         'form': form,
