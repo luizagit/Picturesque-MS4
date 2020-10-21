@@ -57,7 +57,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Manage your Picturesque</a>
+                                    <a href="{% url 'add_photo' %}" class="dropdown-item">Picturesque Management</a>
                                 {% endif %}
                                 <a href="{% url 'user_profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
