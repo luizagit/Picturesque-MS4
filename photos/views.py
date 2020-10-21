@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Photo, Category
 from django.db.models.functions import Lower
+from .models import Photo, Category
+from .forms import PhotoForm
 
 # Create your views here.
 
@@ -56,3 +58,13 @@ def photo_detail(request, photo_id):
     }
 
     return render(request, 'photos/photo_detail.html', context)
+
+def add_photo(request):
+    """ Add a photo to the store """
+    form = PhotoForm()
+    template = 'photos/add_photo.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
