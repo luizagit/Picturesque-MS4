@@ -60,11 +60,14 @@ def photo_detail(request, photo_id):
 
     return render(request, 'photos/photo_detail.html', context)
 
+
 @login_required
 def add_photo(request):
     """ Add a photo to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        messages.error(
+            request, 'Sorry, you need to be a Picturesque admin to perform this operation.'
+            )
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -89,7 +92,9 @@ def add_photo(request):
 def edit_photo(request, photo_id):
     """ Edit a photo in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        messages.error(request, 
+        'Sorry, you need to be a Picturesque admin to perform this operation.'
+        )
         return redirect(reverse('home'))
 
     photo = get_object_or_404(Photo, pk=photo_id)
@@ -117,9 +122,11 @@ def edit_photo(request, photo_id):
 def delete_photo(request, photo_id):
     """ Delete a photo from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you need to be a Picturesque admin to perform this operation.')
+        messages.error(
+            request, 'Sorry, you need to be a Picturesque admin to perform this operation.'
+            )
         return redirect(reverse('home'))
-        
+
     photo = get_object_or_404(Photo, pk=photo_id)
     photo.delete()
     messages.success(request, 'Photo deleted!')
