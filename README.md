@@ -107,4 +107,36 @@ To be able to run this project, the following tools have to be installed:
 Apart from that, you also need to create accounts with the following services:
 - [Stripe](https://stripe.com/)
 - [Amazon AWS](https://signin.aws.amazon.com) to setup the [S3 basket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+- [Gmail](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp) account
+
+1. At the top of this repository, click the green button **Clone or download**.
+2. In the Clone with HTTPs section, copy the clone URL for the repository.
+3. Change the current working directory to the location where you want the cloned directory to be made.
+4. Type git clone, and then paste the URL you copied in Step 2.
+5. Press Enter. Your local clone will be created.
+6. To create a virtual environment within project directory enter `python3 -m venv .venv` 
+7. Taking Visual Studio Code as example, type: `code .`
+8. Edit `~/.bashrc` by adding the following env vars:
+`export DEVELOPMENT=True`
+`export SECRET_KEY="<Your Secret key>"`
+`export STRIPE_PUBLIC_KEY="<Your Stripe Public key>"`
+`export STRIPE_SECRET_KEY="<Your Stripe Secret key>"`
+9. Install all required modules from requirements.txt with the command `python3 -m pip install -r requirements.txt`
+10. In the terminal in your IDE migrate the models to crete a database using the following commands:
+`python3 manage.py makemigrations --dry-run`
+`python3 manage.py makemigrations`
+`python3 manage.py migrate --plan`
+`python3 manage.py migrate`
+11. Load the data fixtures (**categories** and **photos**) in that order into the database using the following commands:
+`python manage.py loaddata categories`
+`python manage.py loaddata photos`
+12. Create a superuser to have access to the admin panel (you need to follow the instructions and insert username, email and password):
+`python3 manage.py createsuperuser`
+13. You will now be able to run the application using the following command:
+`python3 manage.py runserver 0.0.0.0:8000`
+14. To access the admin panel, you can add the **/admin** path at the end of the url link and login using your superuser credentials.
+
+
+
+
 
