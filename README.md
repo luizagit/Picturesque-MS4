@@ -54,9 +54,26 @@ The web application is carved into the following sections:
 
 ### Administration and Picturesque Store Management
 
-- As a superuser/admin, I would like to have the ability to add a new photo.
-- As a superuser/admin, I would like to have the ability to edit or update photo characteristics like price, description etc.
-- As a superuser/admin, I would like to have the ability to delete a photo.
+- As a superuser/admin, I would like to have the ability to add a new photo in the front end or back end.
+- As a superuser/admin, I would like to have the ability to edit or update photo characteristics like price, description etc. in the front end or back end.
+- As a superuser/admin, I would like to have the ability to delete a photo in the front end or back end.
 
+## Utilised Technologies
 
-
+- HTML, CSS and JavaScript.
+- Bootstrap - to create responsive, mobile-first front-end web development components.
+- Visual Studio Code - the IDE of choice.
+- Django - full fledged web framework following the model-template-views architectural pattern.
+- Django-crispy-forms - to help with managing Django forms and adjust various forms properties on the backend.
+- Django-countries - which was used for the country field that provides all ISO 3166-1 countries as choice for the users.
+- Django-allauth - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- Django-storages - a collection of custom storage backends for Django that was used with Amazon S3 integration in our website.
+- Dj-database-url - used for integration with Heroku PostgreSQL.
+- Stripe - payment processing software and application programming interface for e-commerce websites and mobile applications.
+- Pillow - Python Imaging Library, it was used to add support for opening, manipulating, and saving images.
+- Psycopg2 - PostgreSQL database adapter for the Python programming language
+- Flake8 - for checking the code base against coding style (PEP8), programming errors.
+- JQuery - JavaScript library.
+- Gunicorn - Web Server Gateway Interface (WSGI) server implementation was used to run the Python application on Heroku.
+- Heroku - an ecosystem of cloud services, which can be used to instantly extend applications with fully-managed services, it was used to deploy Picturesque application production version.
+- Amazon AWS - to store application content such as media files, static assets, and photo uploads for use by Heroku deployment hence offloading the storage of static files from Heroku app's dynos ephemeral filesystem.
