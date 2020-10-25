@@ -9,6 +9,7 @@ This full-stack website represents the last milestone project I designed at Code
 [Click here to view the project live](https://picturesque-app-ms4.herokuapp.com)
 
 ## The Goal of This Website
+
 The idea behind Picturesque project was building an e-commerce web application targeting my personal photos that will feature the ability to filter based on desired photography category, a live functional payment system, a complete authentication ecosystem that includes email confirmation and user profile, finally real time notifications to complete our user's experience.
 
 The web application is carved into the following sections:
@@ -23,7 +24,21 @@ The web application is carved into the following sections:
 - Picturesque Management page. Here the web application superuser/django admin can add photos.
 
 ## UX
+### Project Target Audience
+
+- People who love the art of photography and don't mind spending money for it.
+
+### Business goals:
+
+- Provide users with a secure professional e-commerce online shop
+- Make profit from selling my personal photos
+
 ### Exploring Photos and Navigation
+
+- As a customer, I expect to access the website from any device, so that I can use the website anytime and anywhere.
+- As a customer, I expect to easily navigate the website, so that I can quickly find what I'm looking for.
+- As a customer, I want to easily access social media links of the website owner, so that I can read more information about the business overall.
+- As a customer, I want to be able to easily contact the owner/manager of the company, so that I can write an additional query or ask a question.
 - As a customer, I would like to view all the photos available and be able to select the ones that resonate with my taste.
 - As a customer, I would like to view the photo in its original size. 
 - As a customer, I would like to view specific photo details including price, description and rating.
@@ -31,11 +46,15 @@ The web application is carved into the following sections:
 - As a customer, I would like to view the total of my purchases at any time in order to avoid spending more than what I intend to do.
 
 ### Sorting and Searching
+
 - As a customer, I would like to sort the list of available photos using criterias such as high or low rating, high to low or low to high price, specific category/topic.
 - As a customer, I would like to sort a specific category/topic of photos and find within the best rated or best priced items.
 - As a customer, I would like to sort multiple categories/topics of photos and find within the best rated or best priced items.
 
 ### Purchasing and Checkout
+
+- As a customer, I want to view and modify my order in the cart before completing it, so that I can make last changes easily before proceeding to payment.
+- As a customer, I want to view a total price of my purchases and delivery cost, so that I will understand and see how much I will be charged.
 - As a customer, I would like to easily adjust the quantity of a photo when purchasing it.
 - As a customer, I would like to view the photos in my photobag to be purchased and identify the total cost and also granulary cost per photo.
 - As a customer, I would like to experience an easy to use and clear payment system that will give me assurance regarding online security. 
@@ -77,3 +96,15 @@ The web application is carved into the following sections:
 - Gunicorn - Web Server Gateway Interface (WSGI) server implementation was used to run the Python application on Heroku.
 - Heroku - an ecosystem of cloud services, which can be used to instantly extend applications with fully-managed services, it was used to deploy Picturesque application production version.
 - Amazon AWS - to store application content such as media files, static assets, and photo uploads for use by Heroku deployment hence offloading the storage of static files from Heroku app's dynos ephemeral filesystem.
+
+## Deployment
+### Local Deployment
+
+Picturesque project was developed using Visual Studio Code IDE and using Git & GitHub for version control. It is hosted on the Heroku platform with static, media files and photo uploads being hosted in AWS S3 Basket.
+To be able to run this project, the following tools have to be installed:
+- An IDE of your choice, I used [Visual Studio Code](https://code.visualstudio.com/) for creating this project
+- [Git](https://git-scm.com/), [Python3](https://www.python.org/downloads/), [Pip3](https://pypi.org/project/pip/)
+Apart from that, you also need to create accounts with the following services:
+- [Stripe](https://stripe.com/)
+- [Amazon AWS](https://signin.aws.amazon.com) to setup the [S3 basket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+
