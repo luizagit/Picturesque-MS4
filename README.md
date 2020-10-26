@@ -114,27 +114,29 @@ Apart from that, you also need to create accounts with the following services:
 3. Change the current working directory to the location where you want the cloned directory to be made.
 4. Type git clone, and then paste the URL you copied in Step 2.
 5. Press Enter. Your local clone will be created.
-6. To create a virtual environment within project directory enter `python3 -m venv .venv` 
-7. Taking Visual Studio Code as example, type: `code .`
-8. Edit `~/.bashrc` by adding the following env vars: (<br/>) 
-`export DEVELOPMENT=True` (<br/>) 
-`export SECRET_KEY="<Your Secret key>"` (<br/>) 
-`export STRIPE_PUBLIC_KEY="<Your Stripe Public key>"` (<br/>) 
-`export STRIPE_SECRET_KEY="<Your Stripe Secret key>"` (<br/>) 
-9. Install all required modules from requirements.txt with the command (<br/>) 
-`python3 -m pip install -r requirements.txt`
-10. In the terminal in your IDE migrate the models to crete a database using the following commands: (<br/>) 
-`python3 manage.py makemigrations --dry-run` (<br/>) 
-`python3 manage.py makemigrations` (<br/>) 
-`python3 manage.py migrate --plan` (<br/>) 
-`python3 manage.py migrate` (<br/>) 
-11. Load the data fixtures (**categories** and **photos**) in that order into the database using the following commands: (<br/>) 
-`python manage.py loaddata categories` (<br/>) 
-`python manage.py loaddata photos` (<br/>) 
-12. Create a superuser to have access to the admin panel (you need to follow the instructions and insert username, email and password): (<br/>) 
-`python3 manage.py createsuperuser` (<br/>) 
-13. You will now be able to run the application using the following command: (<br/>) 
-`python3 manage.py runserver 0.0.0.0:8000` (<br/>) 
+6. To create a virtual environment within project directory enter:<br/>
+`python3 -m venv .venv`<br/>
+7. Taking Visual Studio Code as example, type:<br/>
+`code .`<br/>
+8. Edit `~/.bashrc` by adding the following env vars:<br/>
+`export DEVELOPMENT=True`<br/>
+`export SECRET_KEY="<Your Secret key>"`<br/>
+`export STRIPE_PUBLIC_KEY="<Your Stripe Public key>"` <br/>
+`export STRIPE_SECRET_KEY="<Your Stripe Secret key>"` <br/>
+9. Install all required modules from requirements.txt with the command<br/>
+`python3 -m pip install -r requirements.txt`<br/>
+10. In the terminal in your IDE migrate the models to crete a database using the following commands:<br/>
+`python3 manage.py makemigrations --dry-run`<br/>
+`python3 manage.py makemigrations`<br/>
+`python3 manage.py migrate --plan`<br/>
+`python3 manage.py migrate`<br/>
+11. Load the data fixtures (**categories** and **photos**) in that order into the database using the following commands:<br/>
+`python manage.py loaddata categories`<br/>
+`python manage.py loaddata photos`<br/>
+12. Create a superuser to have access to the admin panel (you need to follow the instructions and insert username, email and password):<br/>
+`python3 manage.py createsuperuser`<br/>
+13. You will now be able to run the application using the following command:<br/>
+`python3 manage.py runserver 0.0.0.0:8000`<br/>
 14. To access the admin panel, you can add the **/admin** path at the end of the url link and login using your superuser credentials.
 
 
