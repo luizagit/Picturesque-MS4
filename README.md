@@ -158,7 +158,7 @@ The website was deployed on [Heroku](https://dashboard.heroku.com/apps) followin
 6. Go to **Settings** then **Reveal Config Vars** in Heroku Dashboard and set the values as follows:
 
 | config vars                   | values                                        | 
-| ------------------------------|-------------                                  |
+| ------------------------------|-----------------------------------------------|
 | AWS_ACCESS_KEY_ID             | <your_aws_access_key>                         |
 | AWS_SECRET_ACCESS_KEY         | <your_aws_secret_access_key>                  | 
 | HEROKU_POSTGRESQL_RED_URL     | <your_postgres_database_url>                  |
