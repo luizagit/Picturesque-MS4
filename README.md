@@ -139,7 +139,37 @@ Apart from that, you also need to create accounts with the following services:
 `python3 manage.py runserver 0.0.0.0:8000`<br/>
 14. To access the admin panel, you can add the **/admin** path at the end of the url link and login using your superuser credentials.
 
+### Heroku Deployment
 
+To start Heroku Deployment process, you need to clone the project as described in the **Local deployment** section above.
+To deploy the project to [Heroku](https://dashboard.heroku.com/apps) the following steps need to be completed:
+
+The website was deployed on [Heroku](https://dashboard.heroku.com/apps) following these steps:
+
+1. Create a **requirements.txt** file, which contains a list of the dependencies, using the following command in the terminal:<br/>
+`python3 -m pip freeze --local > requirements.txt`<br/>
+2. Create a **Procfile**, in order to tell Heroku how to run the project, using the following command in the terminal:<br/>
+`web: gunicorn picturesque_ms4.wsgi:application`<br/>
+3. `git add -A`, `git commit -m "<message>`, `git push` the files to the Github repositoty of this project.
+4. Other modules that are required for the Heroku deployment and have to be installed: **gunicorn** (WSGI HTTP Server), **dj-database-url** for database connection and **Psycopg** (PostgreSQL driver for Python). All of the mentioned above are already installed in this project and mirrored in the **requirements.txt** file.
+5. Go to Heroku and create a new app. Set a name for this app and select the closest region.
+6. Go to **Resources** tab in Heroku, then in the **Add-ons** search bar look for **Heorku Postgres**(you can type postgres), select **Hobby Dev — Free** and click **Provision** button to add it to your project.
+5. Choose Deployment method as GitHub in Heroku Dashboard and link the Github repository to the Heroku app.
+6. Go to **Settings** then **Reveal Config Vars** in Heroku Dashboard and set the values as follows:
+
+| config vars                   | values                                        | 
+| ------------------------------|-------------                                  |
+| AWS_ACCESS_KEY_ID             | <your_aws_access_key>                         |
+| AWS_SECRET_ACCESS_KEY         | <your_aws_secret_access_key>                  | 
+| HEROKU_POSTGRESQL_RED_URL     | <your_postgres_database_url>                  |
+| EMAIL_HOST_PASS               | <your_email_password_generated_by_gmail>      |
+| EMAIL_HOST_USER               | <your_email_address>                          |
+| IP                            | 0.0.0.0                                       |
+| SECRET_KEY                    | <your_secret_key>                             |
+| STRIPE_PUBLIC_KEY             | <your_stripe_public_key>                      |
+| STRIPE_SECRET_KEY             | <your_stripe_secret_key>                      |
+| STRIPE_WH_SECRET              | <your_stripe_webhook_key>                     |
+| USE_AWS                       | True                                          |
 
 
 
