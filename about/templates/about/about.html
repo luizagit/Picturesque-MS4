@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="{% static 'about/css/about.css' %}">
 {% endblock %}
 
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -25,4 +24,101 @@
             </div>
         </div>
     </div>
+
+    <!-- ----- MAIN CONTENT ----- -->
+
+    <div id='main-container'>
+        <div id='main-column'>
+            <div class='row'>
+                <div class='col-12'>
+                    <p class='typewriter'>I'm a
+                        <span class='typewriter-text' data-text='[ "photographer. ", "designer. ", "developer. " ]'></span>
+                    </p>
+                </div>
+            </div>
+            <div class='title-img'>
+                <img src="/media/about_pic.jpg" alt='man_smoke' width='992px' height='1108px' />
+            </div>
+
+            <!-- ----- ABOUT ----- -->
+
+            <div class='row'>
+                <div class='col-12'>
+                    <div class='anchor' id='about'></div>
+                    <div class='about'>
+                        <h1>Paprika</h1>
+                        <hr />
+                        <p>lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <!-- ----- MY SKILLS ----- -->
+
+                    <div class='my-skills'>
+                        <h2>My Skills</h2>
+                        <p>Photography</p>
+                        <div class='skills-chart'>
+                            <div id='skill-photo'></div>
+                        </div>
+
+                        <p>Web Design</p>
+                        <div class='skills-chart'>
+                            <div id='skill-des'></div>
+                        </div>
+
+                        <p>Photoshop</p>
+                        <div class='skills-chart'>
+                            <div id='skill-phshop'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----- STATS ----- -->
+
+            <div class='row stats'>
+                <div class='col-3 stats-item'>
+                    <span>11+</span><br /> Partners
+                </div>
+                <div class='col-3 stats-item'>
+                    <span>55+</span><br /> Projects Done
+                </div>
+                <div class='col-3 stats-item'>
+                    <span>89+</span><br /> Happy Clients
+                </div>
+                <div class='col-3 stats-item'>
+                    <span>150+</span><br /> Meetings
+                </div>
+            </div>
+            <!-- ----- MY REPUTATION ----- -->
+
+            <div class='row'>
+                <div class='col-12 my-reputation'>
+                    <h2>My Reputation</h2>
+                    <div class='rep-feedback'>
+                        <img src='http://viblaze.co.uk/MyFolder/MyWorks/PortfolioPhoto/bandmember.jpg' alt='band_member' width='255px' height='255px' />
+                        <div class='feedback-text'>
+                            <h3>Chris Fox. <span> CEO at Mighty Schools.</span></h3>
+                            <p>The best photolab in the world, hands down. I've tried places in New York and San Francisco and nothing holds a candle to the results you get here. They do all their black and white film processing in house (as well as all
+                                their colour) and the quality of the work is second to none. They have a fridge and freezer full of specialist film as well as hard to find accessories for film and digital.</p>
+                        </div>
+                    </div>
+                    <div class='rep-feedback'>
+                        <img src='http://viblaze.co.uk/MyFolder/MyWorks/PortfolioPhoto/avatar_g2.jpg' alt='band_member' width='300px' height='300px' />
+                        <div class='feedback-text'>
+                            <h3>Rebecca Flex. <span> CEO at Company.</span></h3>
+                            <p>No one is better than Jhon Doe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block postloadjs %}
+    <script src="{% static 'about/js/about.js' %}"></script>
 {% endblock %}
