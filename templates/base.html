@@ -16,6 +16,8 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap" rel="stylesheet"> 
+           <!-- Favicon -->
+        <!--<link rel="shortcut icon" type="image" href="{% static 'favicon.png' %}"-->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -30,7 +32,7 @@
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>    
     
-        {% endblock %}
+    {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
@@ -41,10 +43,13 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-black pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <h2 class="logo-font text-white my-1"><strong>Picturesque</strong></h2>
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-white my-1"><strong>Picturesque</strong></h2>
+                    <img class="nav-logo" src="{{ MEDIA_URL }}picturesque_logo.png" alt="logo picturesque">
                 </a>
+                    
             </div>
+            
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -95,7 +100,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free shipping on orders over €{{ free_delivery_threshold }}!</h4>                
+                <h5 class="logo-font my-1">Free shipping on orders over €{{ free_delivery_threshold }}!</h5>                
             </div>            
         </div>
     </header>
@@ -129,7 +134,8 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
-    
-  </body>
+</body>
 </html>
+
+  
+

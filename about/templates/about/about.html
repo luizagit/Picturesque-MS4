@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
+
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -14,47 +15,49 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">About</h2>
-                <hr>
+<section>
+    <div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr>
+                    <h1 class="logo-font mb-4">About </h1>
+                    <hr>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ----- MAIN CONTENT ----- -->
+
+    <!------ MAIN CONTENT ------>
 
     <div id='main-container'>
         <div id='main-column'>
             <div class='row'>
                 <div class='col-12'>
-                    <p class='typewriter'>I'm a
-                        <span class='typewriter-text' data-text='[ "photographer. ", "designer. ", "developer. " ]'></span>
-                    </p>
+                    <h3 class='typewriter'>I'm 
+                        <span class='typewriter-text' data-text='[ "Paprika. ","photographer. ", "developer. "]'></span>
+                    </h3>
                 </div>
             </div>
             <div class='title-img'>
-                <img src="/media/about_pic.jpg" alt='man_smoke' width='992px' height='1108px' />
+                <img src="/media/about_pic.jpg" alt='photographer' width='992px' height='1108px' />
             </div>
 
-            <!-- ----- ABOUT ----- -->
+            <!------ ABOUT ----->
 
             <div class='row'>
                 <div class='col-12'>
                     <div class='anchor' id='about'></div>
                     <div class='about'>
-                        <h1>Paprika</h1>
+                        <h2>Paprika</h2>
                         <hr />
-                        <p>lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>I'm photographer and I want to give people experiences they would otherwise never have experienced. I'm here to preserve the moments that otherwise would have been forgotten.</p>
                     </div>
 
-                    <!-- ----- MY SKILLS ----- -->
-
+                    <!------- MY SKILLS ------>
+                    
                     <div class='my-skills'>
                         <h2>My Skills</h2>
                         <p>Photography</p>
@@ -75,46 +78,54 @@
                 </div>
             </div>
 
-            <!-- ----- STATS ----- -->
-
+            <!------- STATS ------->
+      
             <div class='row stats'>
                 <div class='col-3 stats-item'>
-                    <span>11+</span><br /> Partners
+                    <span>5+</span><br /> Partners
                 </div>
                 <div class='col-3 stats-item'>
-                    <span>55+</span><br /> Projects Done
+                    <span>25+</span><br /> Projects Done
                 </div>
                 <div class='col-3 stats-item'>
-                    <span>89+</span><br /> Happy Clients
+                    <span>60+</span><br /> Happy Clients
                 </div>
                 <div class='col-3 stats-item'>
-                    <span>150+</span><br /> Meetings
+                    <span>+88</span><br /> Meetings
                 </div>
             </div>
-            <!-- ----- MY REPUTATION ----- -->
-
+            <!-------- Testimonials ------->
+         
             <div class='row'>
-                <div class='col-12 my-reputation'>
+                <div class='col-12 testimonials'>
                     <h2>My Reputation</h2>
                     <div class='rep-feedback'>
-                        <img src='http://viblaze.co.uk/MyFolder/MyWorks/PortfolioPhoto/bandmember.jpg' alt='band_member' width='255px' height='255px' />
+                        <img src='/media/customer-1.jpg' alt='man portrait' width='300px' height='300px' />
                         <div class='feedback-text'>
-                            <h3>Chris Fox. <span> CEO at Mighty Schools.</span></h3>
-                            <p>The best photolab in the world, hands down. I've tried places in New York and San Francisco and nothing holds a candle to the results you get here. They do all their black and white film processing in house (as well as all
-                                their colour) and the quality of the work is second to none. They have a fridge and freezer full of specialist film as well as hard to find accessories for film and digital.</p>
+                            <h3>George Smith </h3>
+                            <p>"The best photolab in the world. I've tried places in Dublin and nothing holds a candle to the results you get here."" </p>
                         </div>
                     </div>
                     <div class='rep-feedback'>
-                        <img src='http://viblaze.co.uk/MyFolder/MyWorks/PortfolioPhoto/avatar_g2.jpg' alt='band_member' width='300px' height='300px' />
+                        <img src='/media/customer-2.jpg' alt='woman portrait' width='300px' height='300px' />
                         <div class='feedback-text'>
-                            <h3>Rebecca Flex. <span> CEO at Company.</span></h3>
-                            <p>No one is better than Jhon Doe.</p>
+                            <h3>Melissa Hamilton</h3>
+                            <p>"Great shots of Dublin and Ireland" </p>
+                        </div>
+                    </div>
+                    <div class='rep-feedback'>
+                        <img src='/media/customer-3.jpg' alt='man portrait' width='300px' height='300px'  />
+                        <div class='feedback-text'>
+                            <h3>Jack Norris</h3>
+                            <p>"The quality of prints is good, the selection is good, I will certainly be a repeat customer."</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
 {% endblock %}

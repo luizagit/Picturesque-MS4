@@ -97,6 +97,74 @@ The web application is carved into the following sections:
 - Heroku - an ecosystem of cloud services, which can be used to instantly extend applications with fully-managed services, it was used to deploy Picturesque application production version.
 - Amazon AWS - to store application content such as media files, static assets, and photo uploads for use by Heroku deployment hence offloading the storage of static files from Heroku app's dynos ephemeral filesystem.
 
+## Testing
+
+### Automated Testing
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/)
+- [W3C Markup Validation](https://validator.w3.org/)
+- `python3 -m flake8`
+
+### Manual Testing
+
+#### Responsiveness
+- Tested each page of the website from multiple devices and multiple browsers
+- Tested with Google Dev Tools "Responsive" feature to check all pages for all resolutions from 320px and above
+
+#### Navbar
+- Clicked on all the links in the navbar, to check if they work properly pointing to the correct destination.
+- Checked all the links on different devices (navbar looks different for mobile, tablet and desktop screens).
+- On mobile devices made sure that navbar is collapsed and the side bar shows up when the hamburger menu is clicked
+- Scrolled down the page to see if the navbar is visible for a user all the time.
+- Tested the navbar being non-logged in, logged in and as an admin user and to see if the user's status is reflected in the navbar links:
+    - login|register - for guests users
+    - my profile, order history, logout - for all logged in users
+    - for admin additional link - picturesque management
+- Checked when a photo is added to the photobag, a cart icon's colour changes to blue and a toast element with cart total and photobag summary appears, the total updating each time new item is added or deleted from the cart.
+
+#### Home Page
+- Tested all the buttons accross the page
+- Verified that the expected text, icons and images are displayed
+- Checked "BUY NOW" button is functional
+- Tested all the buttons redirect to the corresponding pages (Store,Gallery, About and Contact)
+- Tested all the text sections, icons and all the images display correctly, changing the position, size when viewed on different screens.
+
+#### Store Page
+- Tested filtering based on price, rating, category or simply exploring all photos are working correctly when clicking on Store. 
+- Tested all photos have correctly displayed name, price, category, rating and that edit/delete options are visible for superuser only.
+- Tested "Sort By" sort selector works correctly and all sorting categories are displayed and actionable by user.
+- Checked the total number of photos is displayed on the page.
+- Tested that the user can see after each sorting a "Picturesque Home" link near the total amount of photos that will redirect to Store Page, basically to the state before sorting action.
+- Tested scroll to top button works correctly.
+- Tested clicking on a photo it redirects the user to Photo Detail page.
+
+#### Gallery Page
+- Tested all photos have correctly displayed name, price, category, rating and that edit/delete options are visible for superuser only.
+- Tested "Sort By" sort selector works correctly and all sorting categories are displayed and actionable by user.
+- Checked the total number of photos is displayed on the page.
+- Tested that the user can see after each sorting a "Picturesque Home" link near the total amount of photos that will redirect to Store Page, basically to the state before sorting action.
+- Checked the categories are displayed and the filtering after clicking each category displays expected results.
+- Tested scroll to top button works correctly.
+- Tested clicking on a photo it redirects the user to Photo Detail page.
+- Tested sorting based on Price, Rating, Name works correctly within a category following filtering.
+
+#### Photo Detail Page
+- Tested photo is properly displayed.
+
+
+#### About Page
+- Verified that the expected text is displayed correctly.
+- Checked the text sections are displayed correctly on different screens.
+- Checked all images are displayed correctly, the position, layout changes on different screens as expected.
+- Checked "typewriter" is functional and correctly displayed on different screens.
+
+#### Contact Page
+- Tested text and style is displayed correctly.
+- Tested the contact form fields can be populated.
+
+
+
+
+
 ## Deployment
 ### Local Deployment
 

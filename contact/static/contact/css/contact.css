@@ -1,3 +1,129 @@
-h2{
-    color:#12661d;
+.contacts p,
+.footer p,
+h3 {
+    color: #E5E5E5;
+}
+
+.anchor {
+    height: 40px;
+    margin-top: -40px;
+    visibility: hidden;
+}
+
+
+@media screen and (min-width: 600px) {
+    #main-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .anchor {
+        height: 0;
+        margin: 0;
+    }
+}
+
+/* ----- MAIN CONTENT ---- */
+
+#main-container {
+    transition: all 0.3s;
+    background: #000;
+    width: 100%;
+}
+
+#main-column {
+    max-width: 1028px;
+    margin: auto;
+}
+
+
+/* ----- CONTACT FORM ----- */
+
+.contacts {
+    margin-top: 20px;
+}
+
+.contacts ul {
+    list-style: none;
+    padding: 0;
+    color: #E5E5E5;
+}
+
+.contacts li {
+    margin-bottom: 10px;
+}
+
+.contacts li div {
+    display: inline-block;
+    font-size: 2.1em;
+    width: 45px;
+    color: #FCA311;
+}
+
+.contacts input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    display: block;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.contacts button {
+    width: 170px;
+    height: 50px;
+    border: none;
+    margin-bottom:10px ;
+    background: #FCA311;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.contacts button i {
+    font-size: 1.2em
+}   
+
+.contacts button:hover {
+    background: #E5E5E5;
+}
+/* ----- FOOTER ----- */
+
+.footer {
+    padding: 50px 15px 20px;
+}
+
+.contact-icons-list,
+.social-icons-list {
+	list-style: none;
+	padding: 10px;
+}
+
+.contact-list-item {
+	margin: 20px 0 0;
+	padding: 10px;
+}
+
+.social-icons-list li {
+	display: inline-block;
+	font-size: 20px;
+	margin: 5px 5px 0 0;
+}
+
+.social-icons-list li a {
+	color: #fff;
+	background:#FCA311;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+	transition: all .3s ease;
+}
+
+.social-icons-list li a:hover {
+	background-color:  #E5E5E5;
 }

@@ -1,37 +1,16 @@
-* {
-    box-sizing: border-box;
-}
 
-a {
-    text-decoration: none;
+h1{
+    color:#000;
 }
-
-h1,
-h2 {
-    color: #000;
-    font-weight: normal;
-}
-
-p,
 h3 {
     color: #818181;
-    font-weight: normal;
+}
+.about p, .my-skills p, .feedback-text p {
+    color:#fff;
 }
 
-.row {
-    padding: 8px;
-}
-
-.row::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-
-[class*='col-'] {
-    padding: 16px;
-    float: left;
-    width: 100%;
+h2 {
+    color: #fff;
 }
 
 @media screen and (min-width: 600px) {
@@ -79,36 +58,6 @@ h3 {
     visibility: hidden;
 }
 
-.padding-l-24 {
-    padding-left: 24px;
-}
-
-.clear-float {
-    clear: both;
-}
-
-
-/*scrollbar*/
-
-.scroll::-webkit-scrollbar {
-    width: 6px;
-    background-color: #F5F5F5;
-}
-
-.scroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
-}
-
-.scroll::-webkit-scrollbar-thumb {
-    border-radius: 1px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #555;
-}
-
-
-/*scrollbar*/
-
 @media screen and (min-width: 600px) {
     #main-container {
         display: flex;
@@ -122,11 +71,9 @@ h3 {
     }
 }
 
-
 /* ----- MAIN CONTENT ---- */
 
 #main-container {
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     background: black;
     width: 100%;
@@ -153,18 +100,10 @@ h3 {
     height: auto;
 }
 
-
 /* ----- ABOUT ---- */
 
 .about p {
     text-align: justify;
-}
-
-hr {
-    width: 200px;
-    margin: 0 0 21px 0;
-    border: none;
-    border-bottom: 1px solid #818181;
 }
 
 
@@ -180,12 +119,12 @@ hr {
 
 .skills-chart {
     width: 100%;
-    background: #fff;
+    background:  #818181
 }
 
 .skills-chart div {
     height: 25px;
-    background: #818181;
+    background:#FCA311;
 }
 
 #skill-photo {
@@ -209,7 +148,7 @@ hr {
 
 .stats-item {
     height: 120px;
-    background: #ededed;
+    background: #e5e5e5;
     color: #0c0c0c;
     text-align: center;
     padding: 30px 4px 4px;
@@ -224,7 +163,7 @@ hr {
 
 /* ----- MY REPUTATION ----- */
 
-.my-reputation h2 {
+.testimonials h2 {
     margin-bottom: 34px;
 }
 
@@ -256,114 +195,6 @@ hr {
     margin-left: 10px;
 }
 
-
-/* ----- MY PHOTO ----- */
-
-.my-photo {
-    padding: 8px 16px;
-}
-
-.photo-col {
-    padding: 8px
-}
-
-.photo-col img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 18px;
-}
-
-
-/* ----- CONTACT ME ----- */
-
-.contacts {
-    margin-top: 40px;
-}
-
-.contacts ul {
-    list-style: none;
-    padding: 0;
-    color: #818181;
-}
-
-.contacts li {
-    margin-bottom: 10px;
-}
-
-.contacts li div {
-    display: inline-block;
-    font-size: 2.1em;
-    width: 45px;
-    color: #fff;
-}
-
-.contacts input {
-    width: 100%;
-    height: 50px;
-    border: none;
-    display: block;
-    margin-bottom: 16px;
-    padding: 8px;
-}
-
-.contacts button {
-    width: 170px;
-    height: 50px;
-    border: none;
-    background: #fff;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.contacts button i {
-    font-size: 1.2em
-}
-
-.contacts button:hover {
-    background: #b3b3b3;
-}
-
-
-/* ----- FOOTER ----- */
-
-.footer {
-    padding: 50px 8px 20px;
-}
-
-#social i {
-    color: #818181;
-    font-size: 1.5em;
-    margin-right: 5px;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-#social i:hover {
-    color: #505050;
-}
-
-.footer a {
-    color: #b3b3b3;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.footer a:hover {
-    color: #505050;
-}
-
-#footer-text {
-    margin-top: 25px;
-    font-size: 0.85em;
-}
-
-#footer-text p {
-    margin: 0 0 3px;
-}
-
 .container-about {
     display: flex;
     align-items: center;
@@ -380,8 +211,8 @@ hr {
 
 .typewriter-text {
     padding-right: 10px;
-    color: #ffe509;
-    border-right: solid #ffe509 7px;
+    color: #FCA311;
+    border-right: solid#FCA311 7px;
     text-transform: uppercase;
     animation: cursor 1s ease-in-out infinite;
     font-weight: bold;
@@ -389,7 +220,7 @@ hr {
 
 @keyframes cursor {
     from {
-        border-color: #ffe509;
+        border-color: #FCA311;
     }
     to {
         border-color: transparent;
