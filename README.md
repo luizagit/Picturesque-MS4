@@ -7,7 +7,7 @@ This full-stack website represents the last milestone project I designed at Code
 # Table of contents:
  - **[Website](#website)**
  - **[The Goal of This Website](#the-goal-of-this-website)**
- - **[UX](ux)**
+ - **[UX](UX)**
     -  **[Project Target Audience](#project-target-audience)**
     -  **[Business goals](#business-goals)**
     -  **[Exploring Photos and Navigation](#exploring-photos-and-navigation)**
@@ -50,6 +50,7 @@ The web application is carved into the following sections:
 - Picturesque Management page. Here the web application superuser/django admin can add photos.
 
 ## UX
+- This is user story test
 ### Project Target Audience
 
 - People who love the art of photography and don't mind spending money for it.
