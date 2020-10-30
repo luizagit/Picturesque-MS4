@@ -1,38 +1,48 @@
 ![# Milestone 4 - Picturesque-MS4](design/mockup-picturesque.JPG)
 
 This full-stack website represents the last milestone project I designed at Code Institute Full Stack Development course, specifically the Full Stack Frameworks with Django.
-- [Picturesque-MS4](#picturesque-ms4)
-- [Table of contents:](#table-of-contents-)
-  * [Website](#website)
-  * [The Goal of This Website](#the-goal-of-this-website)
-  * [UX](#ux)
-    + [Project Target Audience](#project-target-audience)
-    + [Business goals](#business-goals)
-    + [Exploring Photos and Navigation](#exploring-photos-and-navigation)
-    + [Sorting and Searching](#sorting-and-searching)
-    + [Purchasing and Checkout](#purchasing-and-checkout)
-    + [Registration and User Accounts](#registration-and-user-accounts)
-    + [Administration and Picturesque Store Management](#administration-and-picturesque-store-management)
-  * [Utilised Technologies](#utilised-technologies)
-  * [Testing](#testing)
-    + [Automated Testing](#automated-testing)
-    + [Manual Testing](#manual-testing)
-      - [Responsiveness](#responsiveness)
-      - [Navbar](#navbar)
-      - [Home Page](#home-page)
-      - [Store Page](#store-page)
-      - [Gallery Page](#gallery-page)
-      - [Photo Detail Page](#photo-detail-page)
-      - [About Page](#about-page)
-      - [Contact Page](#contact-page)
-  * [Deployment](#deployment)
-    + [Local Deployment](#local-deployment)
-    + [Heroku Deployment](#heroku-deployment)
-    + [Hosting media and static files with AWS S3](#hosting-media-and-static-files-with-aws-s3)
-    + [Sending emails via Gmail](#sending-emails-via-gmail)
-  * [Acknowledgements](#acknowledgements)
-  * [Disclaimer](#disclaimer)
 
+## Table of Contents
+
+- [Website](#website)
+- [The Goal of This Website](#the-goal-of-this-website)
+- [Front-End Design](#front-end-design)
+- [Wireframes](#wireframes)
+- [UX](#ux)
+  * [Project Target Audience](#project-target-audience)
+  * [Business goals](#business-goals)
+  * [Exploring Photos and Navigation](#exploring-photos-and-navigation)
+  * [Sorting and Searching](#sorting-and-searching)
+  * [Purchasing and Checkout](#purchasing-and-checkout)
+  * [Registration and User Accounts](#registration-and-user-accounts)
+  * [Administration and Picturesque Store Management](#administration-and-picturesque-store-management)
+- [Utilised Technologies](#utilised-technologies)
+- [Testing](#testing)
+  * [Automated Testing](#automated-testing)
+  * [Manual Testing](#manual-testing)
+    + [Responsiveness](#responsiveness)
+    + [Navbar](#navbar)
+    + [Home Page](#home-page)
+    + [Store Page](#store-page)
+    + [Gallery Page](#gallery-page)
+    + [Photo Detail Page](#photo-detail-page)
+    + [Photo Bag Page](#photo-bag-page)
+    + [Checkout and checkout success pages](#checkout-and-checkout-success-pages)
+    + [Authentication Pages](#authentication-pages)
+    + [Profile and Order History](#profile-and-order-history)
+    + [Admin Picturesque Management functionality](#admin-picturesque-management-functionality)
+    + [About Page](#about-page)
+    + [Contact Page](#contact-page)
+  * [Other Testing](#other-testing)
+- [Deployment](#deployment)
+  * [Local Deployment](#local-deployment)
+  * [Heroku Deployment](#heroku-deployment)
+  * [Hosting media and static files with AWS S3](#hosting-media-and-static-files-with-aws-s3)
+  * [Sending emails via Gmail](#sending-emails-via-gmail)
+- [Credits](#credits)
+  * [Content](#content)
+- [Acknowledgements](#acknowledgements)
+- [Disclaimer](#disclaimer)
 
 ## Website
 
@@ -62,7 +72,6 @@ The web application is carved into the following sections:
 I used Balsamiq to create wireframes which will provide an overview of how the website will look like on mobile screen size. (https://balsamiq.com/)
 
 [wireframes](design/Picturesque-Wireframes.pdf)
-
 
 ## UX
 ### Project Target Audience
@@ -367,7 +376,11 @@ In order to send real emails from the application, you need to connect it to you
 ## Credits
 ### Content
 
-Picturesque website was inspired by Project - Boutique Ado because what better guidance throughout my last milestone journey than the Code Institute teachings and lessons.
+- Picturesque website was inspired by Project - Boutique Ado because what better guidance throughout my last milestone journey than the Code Institute teachings and lessons.
+- All photos used in the Store/Gallery pages are samples from my husband's personal collection. 
+- Additional photos used like about_pic, background_pic, customer-1,2 and 3 used in this website were obtained from the below sites:
+* (https://unsplash.com/)
+
 
 ## Acknowledgements
 - I would like to give a thank you to my mentor Seun Owonikoko for all the help and advice she has given throught the project milestone.
