@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 
 h1{
     color:#000;
@@ -60,8 +67,12 @@ h2 {
 
 @media screen and (min-width: 600px) {
     #main-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 100%;
         height: 100%;
     }
@@ -74,6 +85,8 @@ h2 {
 /* ----- MAIN CONTENT ---- */
 
 #main-container {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     background: black;
     width: 100%;
@@ -196,8 +209,12 @@ h2 {
 }
 
 .container-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -214,8 +231,18 @@ h2 {
     color: #FCA311;
     border-right: solid#FCA311 7px;
     text-transform: uppercase;
-    animation: cursor 1s ease-in-out infinite;
+    -webkit-animation: cursor 1s ease-in-out infinite;
+            animation: cursor 1s ease-in-out infinite;
     font-weight: bold;
+}
+
+@-webkit-keyframes cursor {
+    from {
+        border-color: #FCA311;
+    }
+    to {
+        border-color: transparent;
+    }
 }
 
 @keyframes cursor {

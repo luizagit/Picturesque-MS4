@@ -10,7 +10,7 @@ This full-stack website represents the last milestone project I designed at Code
 
 ## The Goal of This Website
 
-The idea behind Picturesque project was building an e-commerce web application targeting my personal photos that will feature the ability to filter based on desired photography category, a live functional payment system, a complete authentication ecosystem that includes email confirmation and user profile, finally real time notifications to complete our user's experience.
+The idea behind Picturesque project was building an e-commerce web application targeting my husband's personal photos that will feature the ability to filter based on desired photography category, a live functional payment system, a complete authentication ecosystem that includes email confirmation and user profile, finally real time notifications to complete our user's experience.
 
 The web application is carved into the following sections:
 - Home page. It presents what the website has to offer by inviting the user to explore the photo collections 
@@ -102,6 +102,7 @@ The web application is carved into the following sections:
 ### Automated Testing
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/)
 - [W3C Markup Validation](https://validator.w3.org/)
+- [CSS Autoprefixer](https://autoprefixer.github.io/)
 - `python3 -m flake8`
 
 ### Manual Testing
