@@ -180,7 +180,56 @@ The web application is carved into the following sections:
 - Tested sorting based on Price, Rating, Name works correctly within a category following filtering.
 
 #### Photo Detail Page
-- Tested photo is properly displayed.
+- Tested photo is correctly displayed.
+- Tested login with superuser credentials and verified that the Edit/Delete buttons appear in both store and gallery pages as well as in photo details pages under the image.
+- Tested being a guest or logging in as a regular user and manually enter the /edit/ and /delete/ urls.
+- Tested by clicking on the "Add to Photobag" button and checked the success toast is popping up and also the photobag summary including total cost is displayed.
+- Clicked on the photo to see it in original size.
+- Tested "Go To Secure Checkout" is displayed after adding a photo to photobag.
+- Tested quantity selector works as expected, 48 photos being the maximum the user can add to the photobag.
+- Tested "Keep Photoshopping" button that correctly redirects the user to Store page to continue exploring photos.
+
+#### Photo Bag Page
+- Tested that the text and images of the added photos are displayed correctly
+- Tested "Keep Photoshopping" button that correctly redirects the user to Store page to continue exploring photos.
+- Tested trying to update the photo quantity and observed how the subtotal was automatically updating as well to reflect the current user's intention. The toast also indicates success on updating the photobag.
+- Tested the price of the photo item is displayed correctly.
+- Tested by manually enter invalid quantity 
+- Tested removing the photo from the photo bag and observed the toast message indicating successful action.
+- Tested by removing all the photo items and checked the empty photobag.
+- Tested Photobag total plus Delivery cost are displayed correctly at the bottom of the page.
+- Tested final Total is displayed correctly at the bottom of the page representing the sum of Photobag Total and Delivery cost.
+- Tested Delivery cost is 0 when the order is above €30.
+- Tested "Secure Checkout" button displays correctly at the bottom of the page.
+- Tested if the photobag is empty, a paragraph informs a user that the photobag is empty; encouraging therefore clicking "Keep PhotoShopping" button that redirects to the Store page.
+
+#### Checkout and checkout success pages
+- Verified that the text and images at "Order Details" section are displayed correctly.
+- Tested clicking "Adjust Photobag" redirects the user to Photobag page.
+- Tested trying to submit an empty field set (checked each section- Personal details, Shipping Info and Payment).
+- Tested trying to put an incorrect information (e.g. email without @).
+- Tested creating a large number of orders as logged in and non-logged in user, ticking or not the save-info checkbox.
+- Tested in the Payment section entering the testing 4242 4242 4242 4242 card number, any expiration date in future and any CVC, and then clicked on the "Complete Order" button (this was also checked on Stripe Dashbord to see if the order was created).
+- Tested trying to enter different and incomplete card numbers, the expiration date in the past to check the error messages.
+- Tested by temporary commenting out the code line `form.submit();` in **stripe.js** file and then trying to submit the form clicking the "Complete Order" button. After that checked the Stripe Dashboard and also Order model in Admin panel to make sure the order was created via webhooks and was saved to the database.
+- Tested when an order is created by non-authenticated user, the save-info checkbox is hidden from the view.
+- Tested after the valid form was submitted, the confirmation email was recieved in the email provided with all the correct order info. As well as that, the checkout page renders showing the order summary.
+- Tested when the order was completed by the logged in user in the checkout success page the order information and the message that a confirmation will be sent to user's provided email are displayed.
+- Checked that in the checkout success page "Now Checkout Out The Latest Deals!" button redirects the user to the Store page.
+- Checked that when the order was completed with correctly entered user information a toast success message is displayed providing the order number that will be as well reflected in the email confirmation to be sent.
+
+#### Authentication Pages
+- These features are built-in components of Django allauth package and were tested manually as well with different accounts created. Forgot/reset password, verification email, login, create account - all work as expected.
+- Tested trying to register entering incorrect email, incorrect password and username/email that already exists in the database.
+- Tested submitting valid registration form.
+- Tested entering two different passwords in registration form and trying to enter old password when reset-ing password.
+- Tested creating an account and trying to login with correct and incorrect details.
+- Tested clicking on logout link in the navbar and then on sign out button.
+- Tested if the registration form is valid, users are informed that they need to verify their account and the email was sent to them with the verification link.
+- Tested when verification link is clicked in the email, user is redirected to the confirmation page, clicking "Confirm" button, success message is displayed and user is automatically logged in.
+- Tested on the login page, when "Forgot password" link is clicked, a user is redirected to the password reset page and asked for their email address, then an email is sent with a link to reset password. After entering new password twice, the password is reset and user can login with a new password.
+- Tested when logout link in the navbar is clicked, the login page opens asking for confirmation to logout, when it is confirmed, the user is logged out and the session is stopped.
+- 
 
 
 #### About Page
