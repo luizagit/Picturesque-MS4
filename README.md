@@ -1,4 +1,4 @@
-![# Milestone 4 - Picturesque-MS4](design/picturesque_mockup.jpg)
+![# Milestone 4 - Picturesque-MS4](design/mockup-picturesque.JPG)
 
 This full-stack website represents the last milestone project I designed at Code Institute Full Stack Development course, specifically the Full Stack Frameworks with Django.
 - [Picturesque-MS4](#picturesque-ms4)
@@ -34,7 +34,6 @@ This full-stack website represents the last milestone project I designed at Code
   * [Disclaimer](#disclaimer)
 
 
-
 ## Website
 
 [Click here to view the project live](https://picturesque-app-ms4.herokuapp.com)
@@ -53,6 +52,17 @@ The web application is carved into the following sections:
 - Checkout page. Here is the checkout form that needs to be filled with the user details regarding identification, delivery address and payment card info. The user can also get in touch with the order details emphasizing the items in the photobag that are about to be purchased.
 - Profile page. It is the section where user's default delivery information and order history are preserved.
 - Picturesque Management page. Here the web application superuser/django admin can add photos.
+
+## Front-End Design
+
+[colors-palette](design/color-scheme.png)
+
+## Wireframes
+
+I used Balsamiq to create wireframes which will provide an overview of how the website will look like on mobile screen size. (https://balsamiq.com/)
+
+[wireframes](design/Picturesque-Wireframes.pdf)
+
 
 ## UX
 ### Project Target Audience
