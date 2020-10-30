@@ -4,7 +4,33 @@
 
 This full-stack website represents the last milestone project I designed at Code Institute Full Stack Development course, specifically the Full Stack Frameworks with Django.
 
-## Deployment website
+# Table of contents:
+ - **[Website](#website)**
+ - **[The Goal of This Website](#the-goal-of-this-website)**
+ - **[UX](UX)**
+    -  **[Project Target Audience](#project-target-audience)**
+    -  **[Business goals](#business-goals)**
+    -  **[Exploring Photos and Navigation](#exploring-photos-and-navigation)**
+    -  **[Sorting and Searching](#sorting-and-searching)**
+    -  **[Purchasing and Checkout](#purchasing-and-checkout)**
+    -  **[Registration and User Accounts](#registration-and-user-accounts)**
+    -  **[Administration and Picturesque Store Management](#administration-and-picturesque-store-management)**
+    -  **[Administration and Picturesque Store Management](#administration-and-picturesque-store-management)**
+ - **[Features](#features)**
+   - **[Existing Features](#existing-features)**
+    - **[Features left to implement](#Features-left-to-implement)**
+ - **[Technologies used](#technologiesused)**
+    - **[Additional tools used](#additional-tools-used)**
+ - **[Testing](#testing)**
+   - **[Testing on Different Browsers](#testing-on-different-browsers)**
+   - **[Testing on Different Devices](#testing-on-different-devices)**
+ - **[Deployment](#deployment)**
+   - **[Cloning my project](#cloning-my-project)**
+ - **[Credits](#credits)**
+   - **[Content](#content)**
+ - **[Acknowledgements](#acknowledgements)**
+
+## Website
 
 [Click here to view the project live](https://picturesque-app-ms4.herokuapp.com)
 
@@ -28,7 +54,7 @@ The web application is carved into the following sections:
 
 - People who love the art of photography and don't mind spending money for it.
 
-### Business goals:
+### Business goals
 
 - Provide users with a secure professional e-commerce online shop
 - Make profit from selling my personal photos
