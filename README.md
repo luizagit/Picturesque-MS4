@@ -7,7 +7,7 @@ This full-stack website represents the last milestone project I designed at Code
 # Table of contents:
  - **[Website](#website)**
  - **[The Goal of This Website](#the-goal-of-this-website)**
- - **[UX](UX)**
+ - **[UX](ux)**
     -  **[Project Target Audience](#project-target-audience)**
     -  **[Business goals](#business-goals)**
     -  **[Exploring Photos and Navigation](#exploring-photos-and-navigation)**
