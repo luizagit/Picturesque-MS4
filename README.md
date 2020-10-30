@@ -97,7 +97,7 @@ The web application is carved into the following sections:
 ### Registration and User Accounts
 
 - As a user, I would like to easily register for a personal account where I should be able to see my profile data.
-- As a user, I would like to easily login to access my personal account information or logout.
+- As a user, I would like to easily login to access my personal account information or sign out.
 - As a user, I would like to easily recover my password in case I forget it.
 - As a user, I would like to receive an email confirmation after I register in order to verify that my account registration was successful.
 - As a user, I would like to have a personalized user profile where I can view my order history and order confirmations and also save my payment information for the ease of future purchases.
@@ -129,8 +129,8 @@ The web application is carved into the following sections:
 - Amazon AWS - to store application content such as media files, static assets, and photo uploads for use by Heroku deployment hence offloading the storage of static files from Heroku app's dynos ephemeral filesystem.
 
 ## Testing
-
 ### Automated Testing
+
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/)
 - [W3C Markup Validation](https://validator.w3.org/)
 - [CSS Autoprefixer](https://autoprefixer.github.io/)
@@ -149,7 +149,7 @@ The web application is carved into the following sections:
 - Scrolled down the page to see if the navbar is visible for a user all the time.
 - Tested the navbar being non-logged in, logged in and as an admin user and to see if the user's status is reflected in the navbar links:
     - login|register - for guests users
-    - my profile, order history, logout - for all logged in users
+    - my profile, order history, sign out - for all logged in users
     - for admin additional link - picturesque management
 - Checked when a photo is added to the photobag, a cart icon's colour changes to blue and a toast element with cart total and photobag summary appears, the total updating each time new item is added or deleted from the cart.
 
@@ -224,13 +224,25 @@ The web application is carved into the following sections:
 - Tested submitting valid registration form.
 - Tested entering two different passwords in registration form and trying to enter old password when reset-ing password.
 - Tested creating an account and trying to login with correct and incorrect details.
-- Tested clicking on logout link in the navbar and then on sign out button.
+- Tested clicking on sign out link in the navbar and then on sign out button.
 - Tested if the registration form is valid, users are informed that they need to verify their account and the email was sent to them with the verification link.
 - Tested when verification link is clicked in the email, user is redirected to the confirmation page, clicking "Confirm" button, success message is displayed and user is automatically logged in.
 - Tested on the login page, when "Forgot password" link is clicked, a user is redirected to the password reset page and asked for their email address, then an email is sent with a link to reset password. After entering new password twice, the password is reset and user can login with a new password.
-- Tested when logout link in the navbar is clicked, the login page opens asking for confirmation to logout, when it is confirmed, the user is logged out and the session is stopped.
-- 
+- Tested when sign out link in the navbar is clicked, the login page opens asking for confirmation to sign out, when it is confirmed, the user is signed out and the session is stopped.
+- Verified the login and registration page are only available to anonymous users.
 
+#### Profile and Order History
+- Tested navigation to My Profile page from the Navbar link where I can see "Default Delivery Information" and "Order History"
+- Tested clicking the order number redirects the user to the previous confirmation page
+- Tested on the My Profile page by filling out the delivery information details form and clicking on the "Update information" button.
+- Tested on the My Profile page update/delete some information in the delivery information form and clicking on the "Update information" button.
+- Tested during checkout the personal and delivery fileds are pre-populated with the delivery information info from My Profile.
+
+#### Admin Picturesque Management functionality
+- Tested navigation to the Picturesque Management page from the navbar.
+- Tested adding a new photo without filling out the mandatory fields.
+- Checked the photo categories are present on the dropdown category menu.
+- Tested adding succesfully a new photo.
 
 #### About Page
 - Verified that the expected text is displayed correctly.
@@ -242,9 +254,10 @@ The web application is carved into the following sections:
 - Tested text and style is displayed correctly.
 - Tested the contact form fields can be populated.
 
+### Other Testing
 
-
-
+- The app was under testing with debugger locally `Debug=True` throughout all the development process. Every time when there was an error (when app crashed), the debugger displayed an error message to the view, that allowed me to find the location of the error and fix it.
+- I also asked my friends and family members to thoroughly test my website in different devices, try to break it and to give me feedback about the design, functionality and their user experience. 
 
 ## Deployment
 ### Local Deployment
@@ -340,6 +353,11 @@ The **static files** and **media files** (that will be uploaded by superuser) ar
 ### Sending emails via Gmail
 
 In order to send real emails from the application, you need to connect it to your **Gmail account**, setting up your email address in **EMAIL_HOST_USER** variable and your app password generated by your email provider in **EMAIL_HOST_PASS** variable.
+
+## Credits
+### Content
+
+Picturesque website was inspired by Project - Boutique Ado because what better guidance throughout my last milestone journey than the Code Institute teachings and lessons.
 
 ## Acknowledgements
 - I would like to give a thank you to my mentor Seun Owonikoko for all the help and advice she has given throught the project milestone.
