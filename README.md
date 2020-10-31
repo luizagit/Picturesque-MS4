@@ -65,11 +65,15 @@ The web application is carved into the following sections:
 
 ## Front-End Design
 
-[colors-palette](design/color-scheme.png)
+Below is a picture of the color palette I got off the website Coolors [https://coolors.co/].. 
+
+![colors-palette](design/color-scheme.png)
+
+I used Google Fonts to select the fonts for my project, I chose Playfair Display because is a classical typeface with a modern feeling that will give designs the elegance they need.”
 
 ## Wireframes
 
-I used Balsamiq to create wireframes which will provide an overview of how the website will look like on mobile screen size. (https://balsamiq.com/)
+I used Balsamiq to create wireframes which will provide an overview of how the website will look like on different screen sizes. (https://balsamiq.com/)
 
 [wireframes](design/Picturesque-Wireframes.pdf)
 
